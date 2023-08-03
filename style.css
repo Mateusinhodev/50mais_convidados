@@ -1,0 +1,268 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-wrap: wrap;
+	color: #fff;  
+    font-size: 16px; 
+    font-weight: 400; 
+    overflow-x: hidden;
+	/* flex: 1 1 100vw;
+	margin: 3px; */
+}
+body, header, nav, main, footer {
+	display: flex;
+	background: rgb(34,40,255);
+    background: linear-gradient(90deg, rgba(34,40,255,1) 0%, rgba(6,1,147,1) 30%, rgba(131,0,7,1) 70%, rgba(247,41,41,1) 100%);
+	/* margin: 3px; */
+}
+
+header {
+	flex: 1 1 100vw;
+}
+
+header #logo {
+	display: flex;
+	background-color: #2228ff;
+	flex: 0 1 50px;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo__img {
+    width: 75px;
+	margin: 10px 45px 10px 45px;
+}
+
+#openMenu, #closeMenu {
+	border: none;
+	background: none;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 0px 5px 0px 5px;
+	cursor: pointer;
+	display: none;
+}
+
+nav {
+    color: #000;
+	justify-content: flex-end;
+	align-items: center;
+	flex: 1 1 200px;
+}
+
+nav a {
+	margin: 0 3%;
+	font-size: 15pt;
+	color: white;
+}
+
+nav a:hover {
+	border-bottom: 2px solid #daa520;
+}
+
+.img_fundo { 
+    width: 100vw;
+    background-image: url(https://i.im.ge/2023/05/18/UnKiIc.Galera1.jpg);
+    background-repeat: no-repeat; 
+    background-size: contain; 
+    align-items: center; 
+    text-align: center; 
+}
+
+.container-secundario {
+	margin-top: 50%;
+}
+
+@media only screen and (max-width: 780px) {
+    
+    header {
+        flex: 1 1 50vw;
+    }
+    
+    header #logo {
+        position: relative;
+        left: 30%;
+        background: linear-gradient(90deg, rgba(34,40,255,1) 0%, rgba(6,1,147,1) 30%, rgba(131,0,7,1) 70%, rgba(247,41,41,1) 100%);
+    }
+
+	#openMenu, #closeMenu {
+		display: block; 
+	}
+
+	#openMenu {
+		margin-left: auto;
+	}
+
+	#closeMenu {
+		position: fixed;
+		right: 15px;
+		top: 15px;
+	}
+
+	nav {
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		background: rgba(255, 255, 255, 0.8);
+		flex-direction: column;
+		align-items: center;
+
+
+		justify-content: center;
+		margin: 0;
+		display: none;
+		opacity: 0;
+		transition: 0.3s;
+
+        z-index: 1;
+	}
+
+	nav a {
+		margin: 3%;
+        color: #000;
+    }
+    
+}
+
+/* Estilização >>>>>Historia<<<<< */
+
+.historia {
+    width: 80vw;
+    margin: 30px auto;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: var(--fonte-principal);
+    border: 2px solid #daa520;
+    border-radius: 28px;
+}
+
+.historia__titulo {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.historia__texto {
+    text-align: justify;
+    margin: 10px 50px;
+}
+
+.historia__texto2 {
+    margin: 10px 140px;
+    text-align: justify;
+}
+
+.historia__fundador, .historia__emblemas, .historia__logo{
+    width: 250px;
+    display: block;
+    margin: 15px auto 5px;
+}
+
+.fundador {
+    margin: 0 auto;
+}
+
+.historia-fundador__descricao {
+    width: 60vw;
+    margin: 30px auto;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.historia__links {
+    text-decoration: underline;
+    color: var(--branco-principal);
+    margin: 30px;
+}
+
+.mebros__diretoria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.historia__diretoria {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 15px auto 5px;
+    /* padding: 15px; */
+}
+
+@media only screen and (max-width: 780px) {
+    
+    .historia {
+        width: 90vw;
+        overflow-y: hidden;
+    } 
+
+    .historia__texto {
+        text-align: justify;
+        margin: 10px 30px 10px 30px;
+    }
+
+    .historia__texto2 {
+        margin: 10px 30px;
+        text-align: justify;
+        text-align: center;
+    }
+
+    .historia__fundador, .historia__emblemas, .historia__logo{
+        width: 180px;
+    }
+
+    .historia__diretoria {
+        width: 300px;
+        height: 300px;
+    }
+    
+}
+
+/* Estilização >>>>>Footer<<<<< */
+
+footer {
+	flex: 100vw;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.rodape {
+	border: 2px solid #daa520;
+	border-radius: 16px;
+	width: 90%;
+	margin: 50px auto;
+	padding-top: 10px;
+	text-align: center;
+}
+
+.redes__contatos img {
+	width: 80px;
+	padding: 20px;
+}
+
+.contato__descricao {
+    font-size: 12px;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.logo__patrocinadores {
+	width: 150px;
+	padding: 15px;
+}
